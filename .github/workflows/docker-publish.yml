@@ -18,8 +18,8 @@ on:
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
-  # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  ORG: gavinstestorg
+  IMAGE_NAME: ${{ env.ORG }}/${{ github.repository.name }}
 
 
 jobs:
